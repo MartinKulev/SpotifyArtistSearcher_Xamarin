@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BeoRecruitment.MainPage"
+             Title="BeoRecruitment">
+
+    <StackLayout>
+        <!--<Label Text="Start developing now" FontSize="Title" HorizontalTextAlignment="Center" Padding="30,10,30,10"/>
+        <Label Text="Create an app that allows you to search for artists on Spotify." FontSize="16" Padding="30,0,30,0"/>
+        <Button Text="Details" Command="{Binding DetailsCommand}"/>-->
+
+        <StackLayout Orientation="Vertical">
+            <SearchBar x:Name="ArtistsSearchBar" 
+               Placeholder="Search for an artist..." 
+               TextChanged="ArtistsSearchBar_OnTextChanged"/>
+            <ListView x:Name="SuggestionListView"
+                      ItemSelected="SuggestionListView_OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10,0,10,0">
+                                <Label Text="{Binding ArtistName}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                                <Image Source="{Binding ArtistImageURL}" WidthRequest="40" HeightRequest="40" VerticalOptions="Center" HorizontalOptions="End" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>
+

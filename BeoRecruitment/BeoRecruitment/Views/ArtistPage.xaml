@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BeoRecruitment.Views.ArtistPage"
+             Title="{Binding Artist.ArtistName}">
+
+    <ScrollView Padding="0,0,0,50">
+        <StackLayout>
+            <Image Source="{Binding Artist.ArtistImageURL}" WidthRequest="400" HeightRequest="400" />
+            <Label Text="Genres" FontSize="Large" FontAttributes="Bold" Margin="10,20,10,0"/>
+            <Label Text="{Binding Artist.Genres}" FontSize="Medium" Margin="10,0,10,0"/>
+            <Label Text="Followers" FontSize="Large" FontAttributes="Bold" Margin="10,20,10,0" />
+            <Label Text="{Binding Artist.FollowerCount}" FontSize="Medium" Margin="10,0,10,0"/>
+            <Label Text="Link to artist" FontSize="Large" FontAttributes="Bold" Margin="10,20,10,0" />
+            <Label Text="{Binding Artist.ExternalURL}" 
+       FontSize="Medium" 
+       Margin="10,0,10,0" 
+       TextColor="#0000ff">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OpenUrlCommand}" 
+                              CommandParameter="{Binding Artist.ExternalURL}" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
