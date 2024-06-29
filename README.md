@@ -4,7 +4,7 @@ This is my first Xamarin application. It is a mobile app where a user can search
 # Installation
 
 ## Android
-1. Download the SpotifyArtistSearcher.apk file from the Android_APK folder.
+1. Download the SpotifyArtistSearcher.apk file from the [Android_APK](https://github.com/MartinKulev/Xamarin_SpotifyArtistSearcher/tree/master/Android_APK) folder.
 2. Run the .apk file on your android device.
 3. Open the application.
 
